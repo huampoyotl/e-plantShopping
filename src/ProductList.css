@@ -59,6 +59,18 @@ body {
     justify-content: center;
 }
 
+.category-header{
+  width: 100%;
+  text-align: center;
+}
+
+.category-name{
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+  padding: 5px;
+  display: inline-block;
+}
+
 /* Product Card */
 .product-card {
     flex: 0 0 calc(33.33% - 20px); /* Adjust width for 3 cards per row with 20px gap */
