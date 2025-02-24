@@ -273,12 +273,12 @@ function ProductList() {
   
     return (
         <div>
-             <div className="navbar" style={styleObj}>
+            <div className="navbar" style={styleObj}>
             <div className="tag">
                <div className="luxury">
                <img src="https://cdn.pixabay.com/photo/2020/08/05/13/12/eco-5465432_1280.png" alt="" />
-               <a href="/" style={{textDecoration:'none'}}>
-                        <div>
+               <a href="#" style={{textDecoration:'none'}} onClick={(e)=>handlePlantsClick(e)}>
+                 <div>
                     <h3 style={{color:'white'}}>Paradise Nursery</h3>
                     <i style={{color:'white'}}>Where Green Meets Serenity</i>
                     </div>
@@ -303,7 +303,7 @@ function ProductList() {
                   <h3 className="product-title">{plant.name}</h3>
                   <p>{plant.description}</p>
                   <p className="product-price ">{plant.cost}</p>
-                  <button  className="product-button" onClick={() => handleAddToCart(plant)}>Add to Cart</button>
+                  <button  className={cartItems.items.find(item => item.name === plant.name) ? "product-button added-to-cart" : "product-button"} onClick={() => handleAddToCart(plant)}>{cartItems.items.find(item => item.name === plant.name) ? "Added to Cart" : "Add to Cart"}</button>
                 </div>
               ))}
             </div>
