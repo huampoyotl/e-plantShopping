@@ -39,7 +39,7 @@ body {
    
 }
 
-.cartQuantity{
+.navbar .cartQuantity{
   font-size: .5em;
   transform: translate(-1.5em, 16px);
 }
